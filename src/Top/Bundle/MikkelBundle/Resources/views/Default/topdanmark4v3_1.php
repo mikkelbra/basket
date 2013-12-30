@@ -1,0 +1,749 @@
+<script type="text/javascript" src="/jquery.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+    </script>
+<!DOCTYPE html
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="da" lang="da">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- 
+	This website is powered by TYPO3 - inspiring people to share!
+	TYPO3 is a free open source Content Management Framework initially created by Kasper Skaarhoj and licensed under GNU/GPL.
+	TYPO3 is copyright 1998-2012 of Kasper Skaarhoj. Extensions are copyright of their respective owners.
+	Information and contribution at http://typo3.org/
+-->
+<base href="http://www2.topdanmark.dk/" />
+
+
+<meta name="generator" content="TYPO3 4.7 CMS" />
+<meta name="robots" content="index, follow" />
+<meta name="google-site-verification" content="_m9t9AJnYbXl0-d1K-J9a6eloMDutn0LfKZ3Tv_maTE" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<link rel="stylesheet" type="text/css" href="typo3temp/compressor/merged-811c21cfdf32898bf13c521f72f973a5-1e0ed71d62fe2c60dff34b64e3d438f2.css?1377613278" media="all" />
+<!--[if IE 7]><link rel="stylesheet" type="text/css" href="typo3temp/compressor/csc-mailform_ie-473212340e7a102e8091e8c138f9bae2.css?1359635686" media="all" /><![endif]-->
+<!--[if IE]><link rel="stylesheet" type="text/css" href="typo3temp/compressor/ie-da4a8e46a19a57dfa78faffb799c9663.css?1368513458" media="all" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" type="text/css" href="typo3temp/compressor/ie6-687a4910dafa6a747a97f27daf1c11b5.css?1356684913" media="all" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" type="text/css" href="typo3temp/compressor/ie7-6d651d7e8a5c1f606d0f8c641305ebda.css?1356684913" media="all" /><![endif]-->
+<!--[if IE 8]><link rel="stylesheet" type="text/css" href="typo3temp/compressor/ie8-0e69fbcb5b26e7bfcfe5777d4bcd27ea.css?1356684913" media="all" /><![endif]-->
+<link rel="stylesheet" type="text/css" href="typo3temp/compressor/print-6caff410761cb439ba94ef8e89f06298.css?1356684913" media="print" />
+
+
+<script src="typo3temp/compressor/merged-43c654643a24bef6aabfc4e7f8c4e391-1db5b450a9301b08d753a1349fd954ff.js?1378111841" type="text/javascript"></script>
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" /><link rel="icon" href="/favicon.ico" />
+
+<script type="text/javascript">
+    
+      var _gaq = _gaq || [];
+       var pluginUrl = 
+       '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+       _gaq.push(['_require', 'inpage_linkid', pluginUrl]); 
+      _gaq.push(['_setAccount', 'UA-19772404-1']); // UA-code = topdanmark.dk
+      // Set the current domain as the GAdomain
+      split = location.hostname.split("://").pop().split("/").shift().split(".");
+      GAdomain = split[split.length-2] + "." + split[split.length-1];
+      _gaq.push(['_setDomainName', GAdomain]);
+      _gaq.push(['_setAllowHash',false]);
+      _gaq.push(['_setAllowLinker',true]); 
+      _gaq.push(['_trackPageview']);
+
+      _gaq.push(['global._setAccount', 'UA-19772404-9']); // UA-code = global
+      // Set the current domain as the GAdomain
+      split = location.hostname.split("://").pop().split("/").shift().split(".");
+      GAdomain = split[split.length-2] + "." + split[split.length-1];
+      _gaq.push(['global._setDomainName', GAdomain]);
+      _gaq.push(['global._setAllowHash',false]);
+      _gaq.push(['global._setAllowLinker',true]);
+      _gaq.push(['global._trackPageview']);  
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://www2.topdanmark.dk/fileadmin/ga' : 'http://www.google-analytics.com') + '/ga.js'; // Replace [TOPDANMARK_SSL_SERVER] with actual SSL-server and upload ga.js to it's root folder
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+  </script>
+  
+  <script type="text/javascript">
+  function trackLinks(){
+    // Set the name of the top domain here, ex. �domain.com�
+    topdomain = "topdanmark.dk";
+    // Domains which should have cookies from the topdomain passed
+    // Seperate each domain with a comma (�,�) and quote each domain
+    // Ex. �another_domain.com�,�another2_comain.com�
+    extDomains = new Array("topnet.dk");
+    // Current domain
+    domainSplit = location.hostname.split("/").shift().split(".");
+    domain = domainSplit[domainSplit.length-2] + "." + domainSplit[domainSplit.length-1];
+    links = document.getElementsByTagName("a");
+    for (var i = 0; i < links.length; i++){
+      links[i].onclick = function(){
+        // The domain of the href
+        tmp = this.href;
+        domainSplit = tmp.split("://").pop().split("/").shift().split(".");
+        linkdomain = domainSplit[domainSplit.length-2] + "." + domainSplit[domainSplit.length-1];
+        
+        // If this is the topdomain, pass the cookie to the domains in the extDomains array
+        if(topdomain == domain){
+          matchIndex = -1;
+          for(var j = 0; j < extDomains.length; j++){
+            if(linkdomain == extDomains[j]) matchIndex = j;
+          }
+          if(matchIndex != -1){
+            _gaq.push(['_link', tmp]); return false;
+          }
+        }
+         // Else if this is not the topdomain but the link is linking to it, pass the cookie
+        else if(linkdomain == topdomain){
+          _gaq.push(['_link', tmp]); return false;
+        }
+      }
+    }
+  }
+  window.onLoad = trackLinks();
+  </script>
+
+	<title>Forsikringspris - Beregn pris p� din forsikring - Topdanmark</title>
+	<meta name="title" content="Forsikringspris - Beregn pris p� din forsikring - Topdanmark" />
+	<meta name="keywords" content="Billig forsikring, forsikring, forsikringer, forsikring tilbud, bilforsikring, indboforsikring, rejseforsikring, Topdanmark" />
+	<meta name="description" content="Beregn din pris p� forsikring og l�s om Topdanmarks rabatter. Nogle forsikringer kan du f� prisen p� her og nu.
+Andre f�r du et tilbud p� med posten." />
+	<meta name="date" content="2013-09-10" />
+	<link rel="canonical" href="http://www2.topdanmark.dk/priser/" />
+	
+
+
+<script type="text/javascript" src="typo3conf/ext/topdkrmo/Resources/Public/Javascript/jquery.form.js"></script>
+<script type="text/javascript" src="typo3conf/ext/topdkrmo/Resources/Public/Javascript/simplermo.js"></script>
+<link rel="stylesheet" type="text/css" href="typo3conf/ext/topdkrmo/Resources/Public/Css/simplermo.css" media="all" />
+
+</head>
+<body>
+<form name="input" action="{{ url('test3')}}" method="post">
+    Hundens navn: <br> 
+    <input type="text" name="Name:"><br>
+    <br> 
+    Forsikringstype: 
+    <br>
+    <input type="radio" name="forsikrings_type" value="almindelig">almindelig <br>
+    <input type="radio" name="forsikrings_type" value="udvidet">udvidet <br>
+    <br> 
+    Hunderace:
+    <br>
+    <select name="hundetype">
+        <option value="Type 1">Type 1</option>
+        <option value="Type 2">Type 2</option>
+        <option value="Type 3">Type 3</option>
+    </select>
+    <br> 
+    <br>
+    <input type="submit" value="SEND">
+</form>
+<hr>
+
+
+	<div id="container" class="subpage">
+		<div id="header">
+			<div id="logo"><a href="http://www2.topdanmark.dk/" title="Topdanmark Forsikring og Pension"></a></div>
+			<div class="searchblock">
+<form action="/soeg/" class="search">
+  <div class="searchinputwrapper">
+    <input type="text" name="tx_indexedsearch[sword]" value="S�g p� Topdanmark" />
+  </div>
+  <input type="submit" class="submit" value="S�g" />
+</form>
+</div>
+			<ul id="servicemenu" class="nav hide-span-children">  <li class="print"><a href="javascript:window.print();" title="Udskriv"><span>Udskriv</span></a></li>
+<li class="contact"><a href="https://www2.topdanmark.dk/topdanmark/kontakt/send-e-mail/" title="Send e-mail"><span>Kontakt</span></a></li><li class="dictionary"><a href="leksikon/" title="Leksikon"><span>Ordbogen</span></a></li><li class="questions"><a href="servicecenter/hjaelp/spoergsmaal-og-svar/" title="Sp�rgsm�l og svar"><span>Sp�rgsm�l og svar</span></a></li><li class="number">
+  <img width="109" height="17" alt="70 13 7-9-13" title="70 13 7-9-13" src="fileadmin/dk.topdanmark//templates/content/phoneimg/tlf_topdk_privat.png"/>
+</li></ul>
+			<ul id="topmenu" class="nav"><li class="first_active" id="private"><a href="http://www2.topdanmark.dk/"  >Privat</a></li><li id="business"><a href="erhverv/"  >Erhverv</a></li><li class="last" id="landbrug"><a href="landbrug/"  >Landbrug</a></li></ul>
+			<div id="submenu"><ul class="nav landbrug"><li class="first"><a href="forsikringer/"  >Forsikringer</a></li><li><a href="pension/"  >Pension</a></li><li class="active"><a href="priser/"  >Priser</a></li><li><a href="anmeld-skade/"  >Anmeld skade</a></li><li><a href="servicecenter/"  >Servicecenter</a></li><li class="last"><a href="topdanmark/"  >Topdanmark</a></li><li class="login"><a href="/servicecenter/log-ind">Log ind</a></li>
+</ul></div>
+		</div>
+		<div id="content">
+			<div id="main">
+				<div id="splash"><a href="forsikringer/fritid/rejseforsikring/rejseforsikring-aaret-rundt/" target="_top" onClick="_gaq.push(['_trackPageview','/events/fileadmin/dokumenter/Billeder/Topdanmark/Herobanner/Underside/Privat/TOPUndersideRejseBil.jpg'])";><img src="fileadmin/dokumenter/Billeder/Topdanmark/Herobanner/Underside/Privat/TOPUndersideRejseBil.jpg" width="729" height="175" border="0" alt="Stor rejsegl�de? intet problem �rsrejseforsikringen d�kker alle ferier for alle i husstanden hele �ret for helt ned til 307 kr." /></a></div>
+				<div id="breadcrumb"><p>Du er her:&nbsp;<span class="bread_cur"><a href="priser/" onfocus="blurLink(this);"  >Priser</a></span></p><!-- AddThis Button BEGIN -->
+<a class="addthis_button"><p> Del indhold </p><img src="fileadmin/dk.topdanmark/templates/content/sharethis/add-this-icon-off.gif" width="14" height="14" alt="del" /></a>
+<script type="text/javascript" src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4fd7097101eac129"></script>
+<!-- AddThis Button END -->
+</div>
+				<div id="pagecontent">
+					<div id="article" class="wider"><!--TYPO3SEARCH_begin--><div id="c6468115" class="csc-default"><div class="csc-header csc-header-n1"><h1 class="csc-firstHeader">Beregn priser og k�b</h1></div><h2 class="csc-subheader csc-subheader-0">Her kan du beregne priser, k�be forsikringer og bestille tilbud</h2></div><div id="c6445587" class="csc-default"><div class="threecolumns clearfix">
+							<div class="col"><div id="c6447635" class="csc-default"><div class="factbox">
+									<div class="pad">
+										<h2>Bilforsikring</h2>
+										
+										<ul><li>Forsikring af bil og f�rer</li><li>D�kker fx uheld, ansvar og tyveri</li></ul>
+										
+										<p class="readmore"><a href="forsikringer/koeretoej/bilforsikring/" >L�s mere</a></p>
+										
+										<div class="rmo-simple">
+										<li><input class="submit" type="submit" name="tx_topdkrmo_simpleform[submit]" value="Tilf�j indk�bskurv" /></li>
+										</div>
+										
+										
+										<a href="https://www2.topdanmark.dk/priser/beregn-bilforsikring/" class="banana">Beregn pris</a>
+									</div>
+									
+									
+								</div></div><div id="c6449683" class="csc-default"><br /></div><div id="c6451731" class="csc-default"><div class="factbox">
+									<div class="pad">
+										<h2>Ung forsikring</h2>
+										
+										<ul><li>S�rligt lav pris til unge under 28 �r</li><li>F� d�kket indbo, ansvar og ulykker</li></ul>
+										
+										
+										
+										<a href="forsikringer/unge-under-28-aar/koeb/" class="banana">Se pris og k�b</a>
+										<div class="rmo-simple">
+										<li><input class="submit" forsikringelement id="btn2" name="tx_topdkrmo_simpleform[submit]" value="Tilf�j indk�bskurv test" /></li>
+										</div>
+									</div>
+								</div></div></div>
+							
+							<div class="col"><div id="c6453779" class="csc-default"><div class="factbox">
+									<div class="pad">
+										<h2>Indboforsikring</h2>
+										
+										<ul><li>D�kker dine ting og ansvar</li><li>D�kker fx ved brand, vandskade og tyveri</li></ul>
+										
+										<p class="readmore"><a href="forsikringer/bolig/hjemforsikring/" >L�s mere</a></p>
+										
+										<div class="rmo-simple">
+										<li><input class="submit" type="submit" name="tx_topdkrmo_simpleform[submit]" value="Tilf�j indk�bskurv" /></li>
+										</div>
+										
+										<a href="priser/prisberegner/" class="banana">Beregn pris</a>
+									</div>
+								</div></div><div id="c6455827" class="csc-default"><br /></div><div id="c6457875" class="csc-default"><div class="factbox">
+									<div class="pad">
+										<h2>Rejseforsikring</h2>
+										
+										<ul><li>V�lg Europa eller hele verden</li><li>D�kker fx behandling i udlandet</li></ul>
+										
+										
+										<li><a href="forsikringer/fritid/rejseforsikring/koeb-aarsrejseforsikring/" class="banana">Test</a></li>
+										
+										<div class="rmo-simple">
+										<li><input class="submit" type="submit" name="tx_topdkrmo_simpleform[submit]" value="Tilf�j indk�bskurv" /></li>
+										</div>
+										
+										<a href="forsikringer/fritid/rejseforsikring/koeb-aarsrejseforsikring/" class="banana">Tilf�j indk�bskurv</a>
+									
+									</div>
+									
+								</div></div></div>
+							
+							<div class="col nomargin"><div id="c6459923" class="csc-default"><div class="factbox">
+									<div class="pad">
+										<h2>Husforsikring</h2>
+										
+										<ul><li>D�kker huset og dit ansvar som husejer</li><li>D�kker fx ved brand, vandskade og storm</li></ul>
+										
+										<div class="rmo-simple">
+										<li><input class="submit" type="submit" name="tx_topdkrmo_simpleform[submit]" value="Tilf�j indk�bskurv" /></li>
+										</div>
+										
+										<a href="priser/prisberegner/" class="banana">Beregn pris</a>
+									</div>
+								</div></div><div id="c6461971" class="csc-default"><br /></div><div id="c6464019" class="csc-default"><div class="factbox">
+									<div class="pad">
+										<h2>B�rneulykkesforsikring</h2>
+										
+										<ul><li>Bedst i test i T�nk 2012</li><li>D�kker ved uheld og ulykker</li></ul>
+										<br>
+										<p class="readmore"><a href="forsikringer/person/ulykkesforsikring/boerneulykkesforsikring/" >L�s mere</a></p>
+										<div class="rmo-simple">
+										<li><input class="submit" type="submit" name="tx_topdkrmo_simpleform[submit]" value="Tilf�j indk�bskurv" /></li>
+										</div>
+										<a href="https://www2.topdanmark.dk/forsikringer/person/ulykkesforsikring/koeb-boerneulykkesforsikring/" class="banana">Se pris og k�b</a>
+									</div>
+								</div></div></div>
+						</div></div><div id="c6472211" class="csc-default"><br /></div><div id="c6670867" class="csc-default"><br /></div><div id="c6474259" class="csc-default"><div class="csc-header csc-header-n5"><h3>Flere forsikringer</h3></div><h2 class="csc-subheader csc-subheader-0">L�s mere om, hvordan du kan blive d�kket. Og se, hvilke fordele du har hos os.</h2></div><div id="c6482451" class="csc-default">
+					<table cellspacing="0" cellpadding="0" class="simplelist"><tr>
+							<td class="column c1">K�ret�jer</td>							
+							<td class="column c2">Bil, motorcykel, camping, vejhj�lp, m.m.</td>							
+							<td class="column c3"><a href="forsikringer/koeretoej/" >Se forsikringer</a></td>							
+						</tr><tr>
+							<td class="column c1">I hjemmet</td>							
+							<td class="column c2">Indbo, hus, sommerhus, ejerskifte, m.m.</td>							
+							<td class="column c3"><a href="forsikringer/bolig/" >Se forsikringer</a></td>							
+						</tr><tr>
+							<td class="column c1">Fritid</td>							
+							<td class="column c2">Rejser, b�d, m.m.</td>							
+							<td class="column c3"><a href="forsikringer/fritid/" >Se forsikringer</a></td>							
+						</tr><tr>
+							<td class="column c1">Person</td>							
+							<td class="column c2">Ulykker, sygdom, l�n, livsforsikring, m.m.</td>							
+							<td class="column c3"><a href="forsikringer/person/" >Se forsikringer</a></td>							
+						</tr><tr>
+							<td class="column c1">Dyr</td>							
+							<td class="column c2">Hund, kat og hest</td>							
+							<td class="column c3"><a href="forsikringer/dyreforsikring/" >Se forsikringer</a></td>							
+						</tr><tr>
+							<td class="column c1">Unge</td>							
+							<td class="column c2">Indbo, ansvar og ulykke til s�rpris</td>							
+							<td class="column c3"><a href="forsikringer/unge-under-28-aar/forsikring-til-unge/" >Se forsikringer</a></td>							
+						</tr></table></div><div id="c6697491" class="csc-default"><div class="csc-header csc-header-n7"><h2>Rabatter og betaling</h2></div></div><div id="c6695443" class="csc-default">
+					<table cellspacing="0" cellpadding="0" class="simplelist"><tr>
+							<td class="column c1">Rabatter</td>							
+							<td class="column c2">Hos os f�r du b�de samlerabat og aldersrabat</td>							
+							<td class="column c3"><a href="priser/rabatter/" >L�s mere</a></td>							
+						</tr><tr>
+							<td class="column c1">Betaling</td>							
+							<td class="column c2">F� information om betaling, udbetaling og gebyrer</td>							
+							<td class="column c3"><a href="priser/betaling/" >L�s mere</a></td>							
+						</tr></table></div><!--TYPO3SEARCH_end--></div>
+					
+				</div>
+			</div>
+			<div id="aside"><!--TYPO3SEARCH_begin--><div id="c6466067" class="csc-default"><script type="text/javascript">
+
+var options = {};
+options.phoneLabel = 'Dit telefonnummer';
+options.target = '#c' + 6466067;
+options.contentId = 6466067;
+
+jQuery(function(){
+	jQuery('#simple-rmo-6466067').callmesimple(options);	
+});
+
+</script>
+
+<div class="rmo-simple">
+	<h2>Skal vi ringe dig op?</h2>
+	<form method="post" id="simple-rmo-6466067" action="priser/?tx_topdkrmo_simpleform%5Baction%5D=request&amp;tx_topdkrmo_simpleform%5Bcontroller%5D=SimpleForm&amp;cHash=4fbaf4ae47a2200cfe19bde730acc898">
+<div style="display: none">
+<input type="hidden" name="tx_topdkrmo_simpleform[__referrer][@extension]" value="Topdkrmo" />
+<input type="hidden" name="tx_topdkrmo_simpleform[__referrer][@controller]" value="SimpleForm" />
+<input type="hidden" name="tx_topdkrmo_simpleform[__referrer][@action]" value="index" />
+<input type="hidden" name="tx_topdkrmo_simpleform[__referrer][arguments]" value="YTowOnt9aa4bbdce71e262770e4d4c51d7528350c406bb51" />
+<input type="hidden" name="tx_topdkrmo_simpleform[__hmac]" value="a:7:{s:10:&quot;identifier&quot;;i:1;s:4:&quot;rKey&quot;;i:1;s:9:&quot;telephone&quot;;i:1;s:11:&quot;alternative&quot;;i:1;s:6:&quot;submit&quot;;i:1;s:6:&quot;action&quot;;i:1;s:10:&quot;controller&quot;;i:1;}34d12c6cee6cad4418f95dc005bf166abc962adf" />
+</div>
+
+		<input type="hidden" name="tx_topdkrmo_simpleform[identifier]" value="6466067" />
+		<input type="hidden" name="tx_topdkrmo_simpleform[rKey]" value="0ef4cb806b0e34ed8e33895db6457e29" />
+		<ol>
+			<li><input class="rmo-simple-phone" id="rmo-phonenr-6466067" type="text" name="tx_topdkrmo_simpleform[telephone]" value="" /></li>
+			<li class="timetocall">Inden for 5 minutter</li>
+			<li><select class="rmo-alternative-select" id="rmo-alternative-select-6466067" name="tx_topdkrmo_simpleform[alternative]"><option value="0">Evt. andet tidspunkt</option>
+<option value="1379001600">18:00</option>
+<option value="1379000700">17:45</option>
+<option value="1378999800">17:30</option>
+<option value="1378998900">17:15</option>
+<option value="1378998000">17:00</option>
+<option value="1378997100">16:45</option>
+<option value="1378996200">16:30</option>
+<option value="1378995300">16:15</option>
+<option value="1378994400">16:00</option>
+<option value="1378993500">15:45</option>
+<option value="1378992600">15:30</option>
+<option value="1378991700">15:15</option>
+</select></li>
+			<li><input class="submit" type="submit" name="tx_topdkrmo_simpleform[submit]" value="Ring mig op" /></li>
+		</ol>
+		
+	</form>
+	<div style="clear:both"></div>
+	
+	
+</div>
+
+<br> <br> 
+<div class="rmo-simple" bgcolor="red">
+	<h2>Din indk�bskurv:</h2>
+<div style="display: none">
+
+</div style="background-color:lightblue;">
+
+<script>
+$(document).ready(function(){
+  $("fg").click(function(){
+    $(this).remove();
+  });
+});
+</script>
+
+
+
+<button id="btn2" class="div.forsikringelement">Append list items</button>
+btn3
+
+</head>
+<body>
+
+<script>
+$(document).ready(function(){
+  $("#btn3").click(function(){
+    $("fg").remove();
+  });
+});
+</script>
+    
+    
+<script>
+$(document).ready(function(){
+
+  $("div.forsikringelement").click(function(event){
+      var id = $(event.target).attr('data-product-id');
+      
+      console.log(id);
+    $("fg").prepend("<li>+"+id+ "Appended item</li>");
+  });
+});
+</script>
+
+<br>
+
+Dine vare: <br> 
+<fg>
+</fg>
+    
+
+
+<button id="btn3">slet alt</button>
+
+		<input type="hidden" name="tx_topdkrmo_simpleform[identifier]" value="6466067" />
+		<input type="hidden" name="tx_topdkrmo_simpleform[rKey]" value="0ef4cb806b0e34ed8e33895db6457e29" />
+		<ol>
+		<br><br><br>
+			<li class="timetocall">*Ingen varer er tilf�jet til indk�bskurven</li><br><br><br>
+			<li><input class="submit" type="submit" name="tx_topdkrmo_simpleform[submit]" value="K�b" /></li>
+			<center>
+			<a href="www.google.dk">GEM KURV</a>
+			</center>
+				
+		</ol>
+		
+	</form>
+	<div style="clear:both"></div>
+</div>
+</div><!--TYPO3SEARCH_end--></div>
+			<div class="clear-both"> </div>
+		</div>
+	</div>
+	<div id="stickyfooter">
+		<div id="bottom"></div>
+		<div id="footer"><div class="vcard">
+<ul class="first">
+  <li class="fn org">Topdanmark A/S</li>
+  <li class="adr">
+    <span class="street-address">Borupvang 4 </span>
+    <span class="postal-code">2750 </span> <span class="locality">Ballerup</span>
+  </li>
+  <li class="cvr-number">Cvr-nr. 78040017</li>
+</ul>
+<ul class="second"><li class="tel">44 68 33 11</li><li class="contact-us"><a href="https://www2.topdanmark.dk/topdanmark/kontakt/send-e-mail/" >Send en mail til os</a></li></ul></div><ul class="third"><li><a href="servicecenter/hjaelp/" onfocus="blurLink(this);"  >Hj�lp</a></li><li><a href="topdanmark/investor-relations/" target="_blank" onfocus="blurLink(this);"  >Investor relations</a></li></ul><ul class="fourth"><li><a href="servicecenter/hjaelp/ansvarsbegraensning/" onfocus="blurLink(this);"  >Ansvarsbegr�nsning</a></li><li><a href="servicecenter/hjaelp/persondatapolitik/" onfocus="blurLink(this);"  >Persondatapolitik</a></li><li><a href="servicecenter/hjaelp/saadan-bruger-vi-cookies/" onfocus="blurLink(this);"  >S�dan bruger vi cookies</a></li></ul><ul class="fifth"><li><a href="/">Tilbage til forsiden</a></li></ul></div>
+	</div>
+<div id="dropdown"><div id="c56" class="csc-default">
+	<div class="mega-drop-down">
+		<div class="inner"><div id="c65" class="csc-default">
+<div class="type1">
+	<div class="left">
+	<dl>
+		<dt>K�ret�jer</dt>
+		<dd><a href="forsikringer/koeretoej/" title="K�ret�jer">Bil, motorcykel m.m.</a></dd>
+	</dl><dl>
+		<dt>Bolig</dt>
+		<dd><a href="forsikringer/bolig/" title="Bolig">Dit hjem og indbo</a></dd>
+	</dl><dl>
+		<dt>Fritid</dt>
+		<dd><a href="forsikringer/fritid/" title="Fritid">N�r du holder fri</a></dd>
+	</dl><dl>
+		<dt>Person</dt>
+		<dd><a href="forsikringer/person/" title="Person">Dig og din familie</a></dd>
+	</dl><dl>
+		<dt>Dyr</dt>
+		<dd><a href="forsikringer/dyreforsikring/" title="Dyreforsikring">Hund, kat og hest</a></dd>
+	</dl>
+	</div>
+	<div class="midt">
+		<p class="blue">Udvalgte forsikringer</p>
+		<p>Gode d�kninger til din hverdag</p>
+		<ul>
+		<li><a href="forsikringer/koeretoej/bilforsikring/" title="Bilforsikring">Bilforsikring</a></li><li><a href="forsikringer/bolig/hjemforsikring/" title="Indboforsikring">Indboforsikring</a></li><li><a href="forsikringer/bolig/husforsikring/" title="Husforsikring">Husforsikring</a></li><li><a href="forsikringer/fritid/rejseforsikring/" title="Rejseforsikring">Rejseforsikring</a></li><li><a href="forsikringer/person/ulykkesforsikring/" title="Ulykkesforsikring">Ulykkesforsikring</a></li><li><a href="forsikringer/person/sundhedsforsikring/" title="Sundhedsforsikring">Sundhedsforsikring</a></li>
+		</ul>
+		<p><a href="forsikringer/" title="Se alle forsikringer">Se alle forsikringer</a></p>
+	</div>
+	<div class="last">
+		<div class="box rounded whiteframe">
+		<img src="typo3temp/pics/32c6ba6c47.jpg" width="222" height="124" border="0" alt="alternativ tekst" />
+		<div class="image-text">
+		<p class="header">Forsikringer til unge</p>
+		<p>F� en ordentlig forsikring til en god pris, n�r du er under 28 �r</p>
+		<p><a href="forsikringer/unge-under-28-aar/forsikring-til-unge/" title="Billig forsikring til unge">Billig forsikring til unge</a></p>
+		</div>
+		<div class="upper-left corner"></div>
+		<div class="upper-right corner"></div>
+		<div class="lower-left corner"></div>
+		<div class="lower-right corner"></div>
+		</div>
+	</div>
+</div>
+</div></div>
+	</div>
+</div><div id="c57" class="csc-default">
+	<div class="mega-drop-down">
+		<div class="inner"><div id="c71" class="csc-default">
+<div class="type1">
+	<div class="left">
+	<dl>
+		<dt>Pensionsordninger</dt>
+		<dd><a href="pension/pensionsordninger/" title="Pensionsordninger">L�s om mulighederne</a></dd>
+	</dl><dl>
+		<dt>Pensionsopsparing</dt>
+		<dd><a href="pension/pensionsopsparing/" title="Pensionsopsparing">Find den rette for dig</a></dd>
+	</dl><dl>
+		<dt>Udbetalingsformer</dt>
+		<dd><a href="pension/udbetalingsformer/" title="Udbetalingsformer">Tilrettel�g din pension</a></dd>
+	</dl><dl>
+		<dt>Omkostninger</dt>
+		<dd><a href="pension/omkostninger/" title="Omkostninger">Gebyrer og omkostninger</a></dd>
+	</dl><dl>
+		<dt>Pensionsinformation</dt>
+		<dd><a href="pension/pensionsinformation/" title="Pensionsinformation">V�rd at vide</a></dd>
+	</dl>
+	</div>
+	<div class="midt">
+		<p class="blue">Genveje</p>
+		<p>Popul�re pensionsordninger og relevant r�dgivning om pension.</p>
+		<ul>
+		<li><a href="pension/pensionsordninger/privatpension/" title="Opret pensionsordning">Privatpension</a></li><li><a href="erhverv/pension/selvstaendige/" title="Pensionsordninger til selvst�ndige">Selvst�ndige</a></li><li><a href="pension/pensionsordninger/pension-via-din-arbejdsgiver/" title="Information om pension via din arbejdsgiver">Pension via arbejdsgiver</a></li><li><a href="pension/pensionsopsparing/" title="V�lg selv opsparings- og investeringsform">Opsparing og investering</a></li><li><a href="pension/pensionsordninger/foer-du-opretter-en-pensionsopsparing/" title="R�dgivning om oprettelse af pensionsordning">F�r du opretter pension</a></li>
+		</ul>
+		<p><a href="pension/pensionsopsparing/seniorraadgivning/" title="L�s om Seniorr�dgivning og bestil">Seniorr�dgivning</a></p>
+	</div>
+	<div class="last">
+		<div class="box rounded whiteframe">
+		<img src="typo3temp/pics/e327c2f2d8.jpg" width="222" height="124" border="0" alt="" />
+		<div class="image-text">
+		<p class="header">Mest ud af pensionen</p>
+		<p>Med Profilpension s�rger vores eksperter for dine investeringer</p>
+		
+		</div>
+		<div class="upper-left corner"></div>
+		<div class="upper-right corner"></div>
+		<div class="lower-left corner"></div>
+		<div class="lower-right corner"></div>
+		</div>
+	</div>
+</div>
+</div></div>
+	</div>
+</div><div id="c58" class="csc-default">
+	<div class="mega-drop-down">
+		<div class="inner"><div id="c69" class="csc-default">
+<div class="type1">
+	<div class="left">
+	<dl>
+		<dt>Prisberegner</dt>
+		<dd><a href="priser/" title="Prisberegner">F� din pris online nu</a></dd>
+	</dl><dl>
+		<dt>Bestil tilbud</dt>
+		<dd><a href="priser/bestil-tilbud/" title="Bestil tilbud">F� et skr�ddersyet tilbud</a></dd>
+	</dl><dl>
+		<dt>Dine rabatordninger</dt>
+		<dd><a href="priser/rabatter/" title="Dine rabatordninger">S�dan sparer du penge</a></dd>
+	</dl><dl>
+		<dt>Betaling og gebyrer</dt>
+		<dd><a href="priser/betaling/" title="Betaling og gebyrer">V�rd at vide</a></dd>
+	</dl>
+	</div>
+	<div class="midt">
+		
+		<p class="blue">Beregn pris, og f� et tilbud</p>
+		<p></p>
+		<ul>
+		<li><a href="https://www2.topdanmark.dk/priser/beregn-bilforsikring/" title="Bil">Bil</a></li><li><a href="priser/prisberegner/" title="Indbo">Indbo</a></li><li><a href="priser/prisberegner/" title="Hus">Hus</a></li><li><a href="forsikringer/fritid/rejseforsikring/koeb-aarsrejseforsikring/" title="Rejse">Rejse</a></li>
+		</ul>
+		<p><a href="priser/" title="">Se oversigt</a></p>
+	</div>
+	<div class="last">
+		<div class="box rounded whiteframe">
+		<img src="typo3temp/pics/a2788e175f.jpg" width="222" height="124" border="0" alt="" />
+		<div class="image-text">
+		<p class="header">Spar penge p� din forsikring</p>
+		<p>F� rabat, n�r du samler dine forsikringer hos os</p>
+		<p><a href="priser/rabatter/topaftale/" title="">L�s mere her</a></p>
+		</div>
+		<div class="upper-left corner"></div>
+		<div class="upper-right corner"></div>
+		<div class="lower-left corner"></div>
+		<div class="lower-right corner"></div>
+		</div>
+	</div>
+</div>
+</div></div>
+	</div>
+</div><div id="c59" class="csc-default">
+	<div class="mega-drop-down">
+		<div class="inner"><div id="c7815" class="csc-default">
+<div class="type7">
+	<div class="left">
+		<dl>
+			<dt><p class="blue">Akut hj�lp - 70 11 33 11</p></dt>
+			<dd>Vejhj�lp 44 74 73 72</dd><dd>Vejhj�lp udland +45 38 48 89 82</dd><dd>Hj�lp p� rejsen +45 44 74 50 00</dd>
+		</dl>
+		<div class="arrows">
+			<dl>
+				<dt><span class="arrowed">&nbsp;</span></dt>
+				<dd><a href="topdanmark/kontakt/" >Flere kontaktmuligheder</a></dd><dd><a href="anmeld-skade/saadan-hjaelper-vi-dig/" >S�dan hj�lper vi</a></dd><dd><a href="anmeld-skade/huskelister/" >Huskeliste til skader</a></dd>
+			</dl>
+		</div>
+	</div>
+	<div class="last">
+		<p class="blue">Anmeld online</p>
+		<ul class="buttons">
+		<li><a href="anmeld-skade/"><span><span><span>Privat</span></span></span></a></li><li><a href="landbrug/anmeld-skade/"><span><span><span>Fritidslandbrug</span></span></span></a></li>
+		</ul>
+	</div>
+</div>
+</div></div>
+	</div>
+</div><div id="c60" class="csc-default">
+	<div class="mega-drop-down">
+		<div class="inner"><div id="c70" class="csc-default">
+<div class="type5">
+	<div class="left">
+	<dl>
+		<dt>Servicetjek</dt>
+		<dd><a href="servicecenter/servicetjek/" title="Servicetjek">Er du godt forsikret?</a></dd>
+	</dl><dl>
+		<dt>Sikkert liv</dt>
+		<dd><a href="servicecenter/sikkert-liv/" title="Forebyggelse">Undg� skader i hverdagen</a></dd>
+	</dl><dl>
+		<dt>Log ind p� Mit Topdanmark</dt>
+		<dd><a href="servicecenter/log-ind/" title="Log ind">Se dine personlige oplysninger</a></dd>
+	</dl><dl>
+		<dt>K�b online</dt>
+		<dd><a href="servicecenter/koeb-forsikring-online/" title="K�b forsikring online">Bliv forsikret med det samme</a></dd>
+	</dl><dl>
+		<dt>Hj�lp</dt>
+		<dd><a href="servicecenter/hjaelp/" title="Hj�lp">F� svar p� dine sp�rgsm�l</a></dd>
+	</dl>
+	</div>
+	
+	<div class="last">
+		<div class="box rounded whiteframe">
+		<img src="typo3temp/pics/1f1089ce98.jpg" width="222" height="124" border="0" alt="Forsikringstjek" />
+		<div class="image-text">
+		<p class="header">Forsikringstjek</p>
+		<p>Matcher dine forsikringer dit behov? Vi giver dig overblik.</p>
+		<p><a href="servicecenter/servicetjek/" title="Kontakt os">Kontakt os</a></p>
+		</div>
+		<div class="upper-left corner"></div>
+		<div class="upper-right corner"></div>
+		<div class="lower-left corner"></div>
+		<div class="lower-right corner"></div>
+		</div>
+	</div>
+</div>
+</div></div>
+	</div>
+</div><div id="c61" class="csc-default">
+	<div class="mega-drop-down">
+		<div class="inner"><div id="c74" class="csc-default">
+
+<div class="type6">
+<div class="threecol">
+
+	<div class="first">
+		<dl class="arrowlist">
+			<dt>Kontaktoplysninger</dt>
+			<dd><a href="topdanmark/kontakt/">Se oversigten her</a></dd>
+		</dl><dl class="arrowlist">
+			<dt>Om Topdanmark</dt>
+			<dd><a href="topdanmark/">Alt om virksomheden</a></dd>
+		</dl><dl class="arrowlist">
+			<dt>S�dan arbejder vi</dt>
+			<dd><a href="topdanmark/saadan-arbejder-vi/">Fokus p� din kundeoplevelse</a></dd>
+		</dl>
+	</div>
+	
+	<div class="second">
+		<dl class="arrowlist">
+			<dt>Om hjemmesiden</dt>
+			<dd><a href="servicecenter/hjaelp/">F� hj�lp her</a></dd>
+		</dl><dl class="arrowlist">
+			<dt>Investor relations</dt>
+			<dd><a href="http://inv.dk.topdanmark.com/stockquote.cfm">Se kursudviklingen</a></dd>
+		</dl><dl class="arrowlist">
+			<dt>Job og karriere</dt>
+			<dd><a href="http://www.topdanmark.com/job-og-karriere/">Se ledige stillinger</a></dd>
+		</dl><dl class="arrowlist">
+			<dt>Presse</dt>
+			<dd><a href="http://www.topdanmark.com/presse/">Presseinformationer</a></dd>
+		</dl>
+	</div>
+	
+	<div class="third">
+		<div class="box rounded whiteframe">
+			<!-- MAP AS LIB OBJECT -->
+			<p class="title">Kontakt</p>
+			<p>Lad os hj�lpe dig med at finde ud af det - vi er til at tale med</p>
+			
+			<p class="buttons">
+				<a href="https://www2.topdanmark.dk/topdanmark/kontakt/send-e-mail/" title="send-email"><span>Send e-mail</span></a>
+				<a href="topdanmark/kontakt/ring-mig-op/" title="ring mig op"><span>Ring mig op</span></a>
+			</p>
+			
+			<div class="clear-both"></div>
+			
+			<div class="twocol">
+				<div class="left">
+					<p>Ring p�</p>
+					<p class="phone">70 13 7-9-13</p>
+				</div>
+				<div class="right">
+					<p class="bodytext">Telefonen er �ben:<br />Mandag - torsdag kl. 8-20<br />Fredag kl. 8-18</p>
+				</div>
+				<div class="clear-both"></div>
+			</div>					
+			
+			<ul class="arrowlist">
+			<li><a href="topdanmark/kontakt/find-salgscenter/">Find salgscenter</a></li>
+			<li><a href="">Bestil tilbud</a></li>
+			<li><a href="topdanmark/kontakt/klager/">Send klage</a></li>
+			</ul>
+			<div class="clear-both"></div>
+		</div>
+	</div>
+
+</div>
+</div>
+</div></div>
+	</div>
+</div><div id="c62" class="csc-default">
+	<div class="mega-drop-down">
+		<div class="inner"><div id="c105" class="csc-default">
+<div class="type7">
+	<div class="left">
+		<dl>
+			<dt><p class="blue">Det kan du p� Mit Topdanmark som privatkunde mellem kl. 7.00 og 22.30</p></dt>
+			<dd>Se dine forsikringer</dd><dd>Se din pensionsordning</dd><dd>Se din skadesoversigt</dd><dd>�ndre personlige oplysninger</dd><dd>Tilmelde dig Betalingsservice</dd>
+		</dl>
+		<div class="arrows">
+			<dl>
+				<dt><span class="arrowed">&nbsp;</span></dt>
+				<dd><a href="http://mit.topdanmark.dk/erhverv/" >Log ind som erhvervskunde</a></dd>
+			</dl>
+		</div>
+	</div>
+	<div class="last">
+		<p class="blue">Mit Topdanmark Privat �bent mellem kl. 7.00 og 22.30</p>
+		<ul class="buttons">
+		<li><a href="http://mit.topdanmark.dk/forside"><span><span><span>Log ind</span></span></span></a></li>
+		</ul>
+	</div>
+</div>
+</div></div>
+	</div>
+</div></div>
+
+<script src="typo3temp/compressor/merged-b2940d96d7e43909a5d092081fa24599-f1d8d789825c35e4018c0e69d0f214d6.js?1371735718" type="text/javascript"></script>
+<script src="fileadmin/dk.topdanmark/templates/pages/js/CXAInsert.js?1369223196" type="text/javascript"></script>
+
+
+</body>
+</html>

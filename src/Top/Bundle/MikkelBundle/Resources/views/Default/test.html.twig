@@ -1,0 +1,208 @@
+<!DOCTYPE html">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="da" lang="da">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<!--  <base href="http://www2.topdanmark.dk/" /> --> 
+
+<title>Forsikringspris - Beregn pris på din forsikring - Topdanmark</title>
+	<meta name="title" content="Forsikringspris - Beregn pris på din forsikring - Topdanmark" />
+	<meta name="keywords" content="Billig forsikring, forsikring, forsikringer, forsikring tilbud, bilforsikring, indboforsikring, rejseforsikring, Topdanmark" />
+	<meta name="description" content="Beregn din pris på forsikring og læs om Topdanmarks rabatter. Nogle forsikringer kan du få prisen på her og nu.
+Andre før du et tilbud på med posten." />
+	<meta name="date" content="2013-09-10" />
+	
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.0.0/backbone.js"></script>
+<script>
+    config = window.config || {};
+    config.urls = {
+        addInsurance : '{{ url('addElement') }}',
+        testinsurance : '{{ url('addElement') }}',
+        
+        showBarsket : '{{ url('showBarsket') }}',
+        deleteAll : '{{ url('sletAlt') }}'
+   };   
+
+</script> 
+<script src="http://localhost:8080/bundles/topmikkel/js/main.js"></script>  
+<link rel="stylesheet" type="text/css" href="http://localhost:8080/bundles/topmikkel/css/style.css">    
+
+</head>
+<body>
+<center> <h1> Indbo forsikring </h1> 
+<h2> - Beregn pris på din forsikring</h2> </center> 
+<h2>- <a href="#indbo">Indbo</a> - Husforsikring - <a href="#bil">Bil</a> - </h2>
+   <!-- 
+    <button id='s1'>show</button> <button id='test'>TEST</button><br><br> 
+   --> 
+   <hr> 
+   <h3> Tilføj/fjern andre forsikringer: </h3> 
+    <button id='addCar'>Add car</button>
+    <button id='addDog'>Add Dog</button>
+    <button id='addHouse'>Add House</button> <br>
+        
+ <!-- 
+    <button id='s4'>GEM forsikring 1</button>
+    <button id='s5'>SLET forsikring 1</button>
+    <br>
+  -->
+        <button id='removeCar'>remove car</button>
+        <button id='removeDog'>remove dog</button>
+        <button id='removeHouse'>remove house</button> <br>
+        <button id='deleteAll'>Slet alt</button> <br>
+            <!--  
+        <button id='testButton'>Test knap</button> <br>
+        <input id="textbox" type="text" />   
+   -->    
+     
+        
+    <div class="center pos_fixed">
+        
+   
+	<h2>Samlet forsikringer</h2>
+
+
+
+
+<hr>
+                       <strong>  Nyligt fjernet: </strong> <br> 
+                             
+                                           <ul id="insurance-listB">
+</ul>
+                                           
+                                           <hr> 
+
+
+<strong>  Tilføjet forsikringer: </strong>   
+<script>
+$(document).ready(function(){
+  $("fg").click(function(){
+    $(this).remove();
+  });
+});
+</script>
+
+</head>
+<body>
+<ul  id="insurance-list">
+</ul>
+  
+<script>
+$(document).ready(function(){
+            
+  $("#tomKurv").click(function(){
+    $("fg").remove();
+  });
+});
+</script>
+
+<fg>
+</fg>
+
+		<input type="hidden" name="tx_topdkrmo_simpleform[identifier]" value="6466067" />
+		<input type="hidden" name="tx_topdkrmo_simpleform[rKey]" value="0ef4cb806b0e34ed8e33895db6457e29" />
+		
+                               <strong><hr>
+                               Din rabat:     </strong><ul id="Totaldiscount"></ul><strong>
+                               Samlet pris:    </strong> <ul id="Totalcost"></ul> <strong> 
+                               
+                               </strong> <hr> 
+                     
+                        <center>
+			<small><strong><a id="showBarsketKnap">BESTIL</a><br> <a id="showBarsketKnap">VIS KURV -</a> <a href="www.google.dk">GEM KURV</a> - <a id="deleteAll">TØM KURV</a><br></strong> </small> 
+			</center>
+	</form>
+     
+	<div style="clear:both"></div>
+</div>
+            
+<hr>
+ <h3> Overblik: </h3> 
+ <ul id="insuranceView"></ul>
+           
+        <hr> 
+            <h3> rediger </h3> 
+        Bil:<br>
+        Mærke: <input type="text" id="carb" value="BMW"><br> 
+        Årgang: <input type="text" id="cara" value="1999"><br> 
+                <button value="prod1" id='postcar'>Rediger</button>
+        <hr> 
+        Hund:<br>
+        
+        Rarce: <input type="text" id="dogtype" value="Lille"><br> 
+        Født: <input type="text" id="dogborn" value="2011"><br> 
+        <button id='dogedit'>Rediger</button>
+                       
+        <hr>   
+        Hus:<br>
+        Adresse: <input type="text" id="huosead" value="Kollegiebakken "><br> 
+        Opført: <input type="text" id="housemade" value="1972"><br> 
+                <button id='posthouse'>Rediger</button>
+        <hr> 
+            
+  <!--
+  *23
+  -->
+  
+      <h1> slut </h1> 
+  <form name="input" method="post">
+    Hundens navn: <br> 
+    <input type="text" name="Name:"><br>
+    <br> 
+    Forsikringstype: 
+    <br>
+    <input type="radio" name="forsikrings_type" value="almindelig">almindelig <br>
+    <input type="radio" name="forsikrings_type" value="udvidet">udvidet <br>
+    <br> 
+    Hunderace:
+    <br>
+    <select name="hundetype">
+        <option value="Type 1">Type 1</option>
+        <option value="Type 2">Type 2</option>
+        <option value="Type 3">Type 3</option>
+    </select>
+    <br> 
+    <br>
+    <input type="submit" value="SEND">
+</form>
+<hr>
+-->
+
+</body>
+</html>
+
+
+
+    <!--
+    
+    *23
+    
+    <br><br> <hr> <a href="C:/Users/Mikkel/phpprojects/first/src/Top/Bundle/MikkelBundle/Resources/views/Default/bilforsikring.html.twig"> SMART </a> 
+        
+    <p>Name: <input type="text" id="test" value="Navn"></p>
+    <button id="sendText">SEND Tekstfelt</button><br><br> 
+    <button id="sletalle">Slet Alt</button> <br><br> 
+    <button id="knap2">Tilføj indbo</button> <br><br>
+    <button id="fjernIndbo">Fjern indbo</button> <br><br>
+    <button id="testpost">test post</button> <br><br>
+    <button id="sletalttest">Slet Alt</button> <br><br> 
+
+    <h1> test af backbone </h1> 
+    <button id="add-insurance" name="test">Tilføj forsikring back</button>
+    <button id="test-insurance" data-product-id="Product testing">test back</button>
+    <button id="deleteAll" data-product-id="INDBO">Slet alt</button>
+    <button id="test-insurance2" data-product-id="INDBO">indbo</button>
+    <button id="test-insurance2" data-product-id="BIL">Bil</button>
+    <button id="test-insurance2" data-product-id="HUS">Hus</button>
+    <br> 
+        
+    <li><input class="submit addinsurance" data-product-id="Bil-forsikring" name="tx_topdkrmo_simpleform[submit]" value="Tilf�j indk�bskurv" /> tilføj 1</li>    
+   
+    <li><input class="submit addinsurance" data-product-id="Indbo-forsikring" name="tx_topdkrmo_simpleform[submit]" value="Tilf�j indbo" />tilføj 2 </li>    
+        <button id="showBarsket">showBarsket</button> <br><br> 
+        
+    her er der vigtig kode 
+       
+    -->
