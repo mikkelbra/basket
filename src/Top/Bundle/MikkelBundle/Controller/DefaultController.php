@@ -11,11 +11,42 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
+use Acme\StoreBundle\Entity\Product;
+
 class DefaultController extends Controller {
 
     const SESSION_PRODUCTS_KEY = 'products';
     const SPK = self::SESSION_PRODUCTS_KEY;
 
+    public function createAction()
+{
+    $product = new Product();
+    $product->setName('Car');
+    $product->setPrice('1999');
+    $product->setDescription('test');
+
+    $em = $this->getDoctrine()->getManager();
+    $em->persist($product);
+    $em->flush();
+
+    return new Response('Created product id '.$product->getId());
+}
+
+public function showAction($id)
+{
+    $product = $this->getDoctrine()
+        ->getRepository('AcmeStoreBundle:Product')
+        ->find($id);
+
+    if (!$product) {
+        throw $this->createNotFoundException(
+            'No product found for id '.$id
+        );
+    }
+
+    // ... do something, like pass the $product object into a template
+}
+    
     /**
      * @Route("/hello/{name}")
      * @Template()

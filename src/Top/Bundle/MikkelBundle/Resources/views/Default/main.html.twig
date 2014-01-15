@@ -30,8 +30,8 @@ Andre før du et tilbud på med posten." />
 
 </head>
 <body>
-C:\Users\Mikkel\phpprojects\first\src\Top\Bundle\MikkelBundle\Resources\views\Default\main.html.twig
-    <script>
+  
+<script>
 $(document).ready(function(){
   $("#hide").click(function(){
     $(".center").hide();
@@ -41,8 +41,7 @@ $(document).ready(function(){
   });
 });
 </script>
-    
-    </script>
+  
 <script> 
 $(document).ready(function(){
   $(".add").click(function(){
@@ -50,15 +49,14 @@ $(document).ready(function(){
   });
 });
 </script>
-    <script> 
+<script> 
 $(document).ready(function(){
-  $("#show2").click(function(){
+  $("#show").click(function(){
     $(".center").slideDown("slow");
   });
 });
 </script>
-    
-        <script> 
+<script> 
 $(document).ready(function(){
   $("#hide2").click(function(){
     $(".center").slideUp("slow");
@@ -69,7 +67,6 @@ $(document).ready(function(){
   <!--
   *23
  
-  
       <h1> slut </h1> 
   <form name="input" method="post">
     Hundens navn: <br> 
@@ -104,22 +101,25 @@ $(document).ready(function(){
 <div id="topsection"><div class="innertube"><h2> &nbsp; Privat &nbsp;  Erhverv &nbsp; Landbrug </h2>
                 
 </div>
-
-        <button id="show2" style="float: right;"> Vis kurv (1)</button>
- 
- <div id="topsection2"><h3> &nbsp;&nbsp;&nbsp; <a href="test">Forsikringer</a> &nbsp;&nbsp;&nbsp;       Pension &nbsp;&nbsp;&nbsp;     Priser  &nbsp;&nbsp;&nbsp;    Andmeld skade </h3>
-  
+        <button id="show" style="float: right;"> kurv     <div id="AntalForsikringer"> </button>
+        <div id="topsection2"><h3> &nbsp;&nbsp;&nbsp; <a href="test">Forsikringer</a> &nbsp;&nbsp;&nbsp;       <a href="car">Pension</a> &nbsp;&nbsp;&nbsp;     Priser  &nbsp;&nbsp;&nbsp;    Andmeld skade </h3>
  </div></div>
     
-    
-    
-
-
+<div class="innertube"> 
 <div id="contentwrapper">
 <div id="contentcolumn">
-<div class="innertube"> 
+    <h2><a href="#indbo">Indbo</a> - <a href="#hus">Husforsikring</a> - <a href="#car">Bil</a></h2>
+ 
+<ceter>
+<h1><div id="insurancetype"></div></h1>
+</center>
 
-<div id="content">
+<h2> - Beregn pris på din forsikring</h2> </center> 
+    
+<div id="content"></div>
+
+    
+    <!--
 <button id="TEST">TEST</button>
     
 <button id="hide">Hide</button>
@@ -127,58 +127,32 @@ $(document).ready(function(){
 <button id="show">Show</button>
 
 <button align="right" id="show2">Slide down</button>
-
     
-    <!--
      <a href="#product/45">produxt</a> 
      <a href="#contact">con</a>
      <a href="#main">MAIN</a>  - 
      <a href="#test">TEST</a>
     -->
- 
-    <div id='layout_test'></div> 
-    
-    <div id='test2'></div>   
-  
-<center> <h1><div id='insurancetype'></h1></div> 
-<h2> - Beregn pris på din forsikring</h2> </center> 
-    <h2>- <a href="#indbo">Indbo</a> - <a href="#hus">Husforsikring</a> - <a href="#car">Bil</a> - </h2>
    
     <div class='beskrivelse' id='content'></div> 
-    
-    <div class='test' id='test'></div> 
-    
+       
     <!-- 
     <button id='s1'>show</button> <button id='test'>TEST</button><br><br> 
    --> 
    <hr> 
    <h3> Tilføj/fjern andre forsikringer: </h3> 
-    <button class="add" id='addCar'>Add car</button>
-    <button class="add" id='addDog'>Add Dog</button>
-    <button class="add" id='addHouse'>Add House</button> <br>
-        
- <!-- 
-    <button id='s4'>GEM forsikring 1</button>
-    <button id='s5'>SLET forsikring 1</button>
-    <br>
-  -->
-        <button id='removeCar'>remove car</button>
-        <button id='removeDog'>remove dog</button>
-        <button id='removeHouse'>remove house</button> <br>
-        <button id='deleteAll'>Slet alt</button> <br>
-            
-   <!--  
-        <button id='testButton'>Test knap</button> <br>
-        <input id="textbox" type="text" />   
-   -->    
-     
-        
+   <button class="add" id='addCar_and_INDBO'>Pakke: BIL + INDBO</button><br> <br>
+    <button class="add" id='addCar'>Tilføj bil</button>
+    <button class="add" id='addDog'>Tilføj indbo</button>
+    <button class="add" id='addHouse'>Tilføj hus</button> <br>
+        <button id='removeCar'>Fjern bil</button>
+        <button id='removeDog'>Fjern indbo</button>
+        <button id='removeHouse'>Fjern hus</button> <br><br>
+        <button id='sletAlle'>Slet alle</button> <br>
+          
 <div class="center pos_fixed" id="ikurv">
-        
-   
+
     <center> <h2>   Dine forsikringer</h2> </center>
-
-
 
   <!--
 <hr>
@@ -188,7 +162,6 @@ $(document).ready(function(){
 </ul>
                                            
   -->                                         <hr> 
-
 
 <strong> <center>  Tilføjet forsikringer: </center> </strong>   
 <script>
@@ -221,19 +194,19 @@ $(document).ready(function(){
                                <strong>
                                <!--<hr>
                                <center> Din rabat:  </center>   </strong><ul id="Totaldiscount"></ul><strong> -->
-                               <center> Samlet pris: </center>   </strong> <ul id="Totalcost"></ul> <strong> 
+                               <center> Samlet pris: </center>   </strong> <ul id="Totalcost"></ul>   
                                
-                               </strong> <hr> 
+                                <hr> 
                      
                         <center>
-			<small><strong><br> <a id="showBarsketKnap">GÅ TIL KURV -</a> <a href="www.google.dk">GEM KURV</a> - <a id="deleteAll">TØM KURV</a><br> <button id="hide2" align="right">Luk</button> </strong> </small> 
+			<small><strong><br> <a id="showBarsketKnap">GÅ TIL KURV -</a> <a href="www.google.dk">GEM KURV</a> - <a id="deleteAll">TØM KURV</a><br> <button id="hide" align="right">Luk</button> </strong> </small> 
 			</center>
 	</form>
      
 	<div style="clear:both"></div>
 </div>
  
-   
+  
    
 <hr>
 <ul  id="insurance-list-view">
@@ -245,15 +218,17 @@ $(document).ready(function(){
   <ul id="insurance-listB"> 
 </ul>
         <hr> 
-            <h3> rediger </h3> 
+            <h3> Rediger </h3> 
         Bil:<br>
         Mærke: <input type="text" id="carb" value="BMW"><br> 
         Årgang: <input type="text" id="cara" value="1999"><br> 
+        Reg nr.: <input type="text" id="regnr" value="AW"><br>         
                 <button value="prod1" id='postcar'>Rediger bil</button>
         <hr> 
         Indbo:<br>
-        Type: <input type="text" id="dogtype" value="Lille"><br> 
-        Værdi: <input type="text" id="dogborn" value="2011"><br> 
+        Type: <input type="text" id="indbotype" value="Lille"><br> 
+        Værdi: <input type="text" id="indbosum" value="2011"><br> 
+             
         <button id='dogedit'>Rediger indbo</button>
                        
         <hr>   
@@ -262,8 +237,6 @@ $(document).ready(function(){
         Opført: <input type="text" id="housemade" value="1972"><br> 
                 <button id='posthouse'>Rediger hus</button>
         <hr> 
-            
-
 </div>
 
 </div>
@@ -274,41 +247,16 @@ $(document).ready(function(){
 
 </div>
 
-<div id="footer"><a href="http://www.dynamicdrive.com/style/">Dynamic Drive CSS Library</a></div>
+<div id="footer"><a href="">-</a></div>
 
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </body>
 </html>
 
-
-
-    <!--
-    
-    *23
-    
-    <br><br> <hr> <a href="C:/Users/Mikkel/phpprojects/first/src/Top/Bundle/MikkelBundle/Resources/views/Default/bilforsikring.html.twig"> SMART </a> 
+<!--
+        *23
+      <br><br> <hr> <a href="C:/Users/Mikkel/phpprojects/first/src/Top/Bundle/MikkelBundle/Resources/views/Default/bilforsikring.html.twig"> SMART </a> 
         
     <p>Name: <input type="text" id="test" value="Navn"></p>
     <button id="sendText">SEND Tekstfelt</button><br><br> 
@@ -317,7 +265,6 @@ $(document).ready(function(){
     <button id="fjernIndbo">Fjern indbo</button> <br><br>
     <button id="testpost">test post</button> <br><br>
     <button id="sletalttest">Slet Alt</button> <br><br> 
-
     <h1> test af backbone </h1> 
     <button id="add-insurance" name="test">Tilføj forsikring back</button>
     <button id="test-insurance" data-product-id="Product testing">test back</button>
@@ -326,10 +273,9 @@ $(document).ready(function(){
     <button id="test-insurance2" data-product-id="BIL">Bil</button>
     <button id="test-insurance2" data-product-id="HUS">Hus</button>
     <br> 
-        
+       
     <li><input class="submit addinsurance" data-product-id="Bil-forsikring" name="tx_topdkrmo_simpleform[submit]" value="Tilf�j indk�bskurv" /> tilføj 1</li>    
-   
-    <li><input class="submit addinsurance" data-product-id="Indbo-forsikring" name="tx_topdkrmo_simpleform[submit]" value="Tilf�j indbo" />tilføj 2 </li>    
+       <li><input class="submit addinsurance" data-product-id="Indbo-forsikring" name="tx_topdkrmo_simpleform[submit]" value="Tilf�j indbo" />tilføj 2 </li>    
         <button id="showBarsket">showBarsket</button> <br><br> 
         
     her er der vigtig kode 

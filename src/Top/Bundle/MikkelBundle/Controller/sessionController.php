@@ -17,8 +17,6 @@ return "Mikkel";
  echo "Slut:";
 
  // $_SESSION['Navn'][0] = "test";
-
-
  // $arrlength=count($_SESSION['Navn']);
 
 
